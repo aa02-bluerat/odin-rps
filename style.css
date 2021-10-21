@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@500&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;  
+}
+
+body{
+    height: 100vh;
+    font-family: 'Baloo Paaji 2', cursive;
+    background-image: linear-gradient(to bottom left, rgb(38, 122, 148) 0%, rgb(97, 31, 160));
+}
+
+.container{
+    margin-inline: auto;
+    width: min(95%,1000px) ;
+}
+
+
+
+#head-title{
+    text-align: center;
+    color: white;
+    font-size: 32px;
+
+    background-color: rgba(231, 152, 61, 0.267);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+
+    border-radius: 20px;
+    margin: 20px auto;
+    padding: 10px 0;
+    width: min(70%,400px);
+    
+}
+
+.scorebox{
+    text-align: center;
+    border: 1px solid red;
+}
+.scorebox h2{
+    color: white;
+    font-size: 29px;
+}
+
+.scoreboard{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.scoreboard div{
+    flex: 0 1 250px;
+    font-size: 20px;
+    margin: 20px;
+    border: 1px solid black;
+    border-radius: 20px;
+
+    background-color: rgba(245, 222, 179, 0.253);
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+}
+
+
+.optionbox h2{
+    color: white;
+    font-size: 29px;
+    text-align: center;
+    margin: 20px auto;
+}
+
+
+#selectionbox{
+    display:flex;
+    justify-content: center;
+    flex-flow: row wrap;
+}
+
+@media(min-width: 376px){    /*this will set that if width is more than 850px, 
+    will become row flex */
+    #selectionbox{
+        display: flex;
+        justify-content:center ;
+        flex-flow: row;
+        margin-inline: auto;
+        max-width: 800px;
+        gap: 35px;
+    }
+    #selectionbox > *{     /* the ">*" means all children under the indicated class*/
+        flex: 0 1 auto;
+    }
+}
+
+img{
+    border-radius: 5px;
+    border: 3px solid black;
+    cursor: pointer;
+}
+
+.option p{
+    margin-top: 0px;
+    font-size: 18px;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+}
