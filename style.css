@@ -16,8 +16,6 @@ body{
     width: min(95%,1000px) ;
 }
 
-
-
 #head-title{
     text-align: center;
     color: white;
@@ -61,6 +59,7 @@ body{
 }
 
 
+
 .optionbox h2{
     color: white;
     font-size: 29px;
@@ -94,6 +93,7 @@ img{
     border-radius: 5px;
     border: 3px solid black;
     cursor: pointer;
+    
 }
 
 .option p{
@@ -102,4 +102,15 @@ img{
     text-align: center;
     font-weight: bold;
     color: white;
+}
+
+.option .key{
+    transition: all .07s ease; /* checkpoint */
+}
+
+.pressed{
+    transform: scale(1.1);
+    border: 3px solid orange;
+    border-color: orange;
+    
 }

@@ -13,7 +13,10 @@ let storedAIScore = 0;
 const playRock = document.querySelector('#rock');
 const playPaper = document.querySelector('#paper');
 const playScissors = document.querySelector('#scissors');
-const selectHand = document.querySelectorAll('.option');
+const selectHand = document.querySelectorAll('.option .key');
+
+//effects
+const imageGrab = document.querySelectorAll('.option .key'); //this class should have the transition timer
 
 function randomNumber(){
     return Math.floor(Math.random()*3)
@@ -62,13 +65,22 @@ function battleLog(a,b){
     battleText.textContent = `Player:${a} vs AI:${b}`;
 }
 
+function removeTransition(e){
+    console.log(e);
+    if (e.propertyName !== 'transform'){   //if not a transform property, return nothing, wont proceed
+        return;
+    }
+    this.classList.remove('pressed')
+}
+
 for (let i=0; i<selectHand.length; i++){
     selectHand[i].addEventListener('click', function(){
         handList = ['ROCK', 'PAPER', 'SCISSORS'];
         playerHand = handList[i];
         aiHand = handList[randomNumber()];
-        console.log('your pick' + playerHand);
-        console.log(aiHand);
+        // console.log('your pick' + playerHand);
+        // console.log(aiHand);
+        selectHand[i].classList.add('pressed');
         playGame(playerHand,aiHand);
         battleLog(playerHand,aiHand);
         if(storedPlayerScore==10 || storedAIScore==10){
@@ -77,12 +89,10 @@ for (let i=0; i<selectHand.length; i++){
     })
 }
 
+imageGrab.forEach((key)=>{
+    key.addEventListener('transitionend', removeTransition)
+})
 
-
-
-// playRock.addEventListener('click', ()=>{
-//     console.log('pressed')
-// })
-
-
-// console.log(playRock);
+//regarding transtion end: after clicking the options, '.option .key' will
+//append '.pressed'. and the '.option .key' should have the transition timer to
+//determine if it has ended or not
