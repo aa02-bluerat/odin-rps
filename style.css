@@ -26,14 +26,13 @@ body{
 
     border-radius: 20px;
     margin: 20px auto;
-    padding: 10px 0;
+    padding: 10px 10px;
     width: min(70%,400px);
     
 }
 
 .scorebox{
     text-align: center;
-    border: 1px solid red;
 }
 .scorebox h2{
     color: white;
@@ -58,6 +57,9 @@ body{
     backdrop-filter: blur(10px);
 }
 
+.scoreboard p{
+    font-size: 32px;
+}
 
 
 .optionbox h2{
@@ -114,3 +116,57 @@ img{
     border-color: orange;
     
 }
+
+
+/* for modal */
+.hidden {
+    display: none;
+}
+
+.modal{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+  
+    background-color: white;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.modal h1,h2{
+    text-align: center;
+}
+
+.bottom-modal{
+    display: flex;
+    margin-block: 30px;
+    gap: 30px;
+    justify-content: space-evenly
+}
+
+#play-again-icon{
+    font-size: 45px;
+    color: rgb(0, 255, 0);
+}
+#play-exit-icon{
+    font-size: 45px;
+    color: rgb(255, 0, 0);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(3px);
+    z-index: 5;
+}
+
+
+  

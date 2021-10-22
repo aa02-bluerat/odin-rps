@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOP RPS</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
@@ -34,6 +35,7 @@
     <section class="optionbox">
         <div class="container"> 
             <h2 id=head-text>Choose a hand...</h2>
+            <h2 id=battle-result></h2>
             <div id="selectionbox">
                 <div class="option">
                     <img src="img/rock.jpg" id="rock" class='key'>
@@ -50,6 +52,20 @@
             </div>
         </div>
     </section>
+
+    <div class="modal start hidden">
+        <h1>GAME OVER!</h1>
+        <h2 id="result-message">You won!</h2>
+        <h2>Would you like to play again?</h2>
+        
+        <div class="bottom-modal">
+            <button class="play-again"><i class="material-icons" id="play-again-icon">restart_alt</i></button>
+            <button class="play-exit"><i class="material-icons" id="play-exit-icon">exit_to_app</i></button>
+        </div>
+        
+    </div>
+    <div class="overlay hidden"></div>
+
 
     <script src="script.js"></script>
 
